@@ -667,7 +667,7 @@ def main():
                                     browse=args.browse)
 
     # Run report on all specified users.
-    all_usernames = []
+    all_usernames = [lekesma]
     for username in args.username:
         if (CheckForParameter(username)):
             for name in MultipleUsernames(username):
