@@ -12,6 +12,9 @@ WORKDIR /opt/sherlock
 ARG VCS_REF
 ARG VCS_URL="https://github.com/sherlock-project/sherlock"
 
+ARG USERNAMES # you could give this a default value as well
+ENV USERNAMES=$lekesma
+
 LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url=$VCS_URL
 
