@@ -12,9 +12,6 @@ WORKDIR /opt/sherlock
 ARG VCS_REF
 ARG VCS_URL="https://github.com/sherlock-project/sherlock"
 
-ARG USERNAMES # you could give this a default value as well
-ENV USERNAMES=$lekesma
-
 LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url=$VCS_URL
 
@@ -27,3 +24,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt -f /wheels \
 WORKDIR /opt/sherlock/sherlock
 
 ENTRYPOINT ["python", "sherlock.py"]
+
+ARG USERNAMES # you could give this a default value as well
+ENV USERNAMES=$lekesma
